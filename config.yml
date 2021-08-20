@@ -27,18 +27,18 @@ collections:
           - { name: "url", label: "Url", widget: "string" }
           - { name: "name", label: "Name", widget: "string" }
   - name: "tourInfo"
-        label: "Tour Info"
-        description: "Upcoming tours and their availability"
-        files:
-          - label: "tour"
-            name: "Tour"
-            file: "site/globals/tours.json"
+    label: "Tour Info"
+    description: "Upcoming tours and their availability"
+    files:
+      - label: "tour"
+        name: "Tour"
+        file: "site/globals/tours.json"
+        fields:
+          - label: "Tour List"
+            name: "tourList"
+            widget: "list"
             fields:
-              - label: "Tour List"
-                name: "tourList"
-                widget: "list"
-                fields:
-                  - { label: "Tour Date", name: "date", widget: "datetime" }
-                  - { label: "Total Places", name: "totalPlaces", widget: "number" }
-                  - { label: "Filled Places", name: "filledPlaces", widget: "number" }
+              - { label: "Tour Date", name: "date", widget: "datetime" }
+              - { label: "Total Places", name: "totalPlaces", widget: "number" }
+              - { label: "Filled Places", name: "filledPlaces", widget: "number" }
 media_folder: 'uploads'
