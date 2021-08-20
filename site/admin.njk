@@ -1,0 +1,38 @@
+---
+permalink: admin.html
+hidden: true
+meta_title: Content Manager
+meta_description: Netlify CMS admin page!
+body_class: admin
+title: '#Netlify CMS admin'
+lang: uk
+---
+
+<!doctype html>
+<html lang="{{ lang }}" class="min-h-full antialiased">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %}</title>
+    <meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
+  <!-- Add the Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>

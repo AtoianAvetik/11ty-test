@@ -52,6 +52,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPassthroughCopy("js")
     eleventyConfig.addPassthroughCopy("images")
     eleventyConfig.addPassthroughCopy("robots.txt")
+    eleventyConfig.addPassthroughCopy("config.yml")
 
     return {
         templateFormats: ["md", "njk"],
