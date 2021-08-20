@@ -43,10 +43,6 @@
 
 <body {% if body_class %} id="{{ body_class }}"{% endif %} class="text-purple-900 leading-normal text-lg">
 
-    <!-- Netlify Identity Widget -->
-    {% if path == "home" %}
-    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    {% endif %}
 
     <a class="sr-only" href="#main">Skip to content</a>
 
@@ -57,6 +53,11 @@
 
         {# include content #}
         {{ content | safe }}
+
+        <!-- Netlify Identity Widget -->
+        {% if path == "home" %}
+        <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        {% endif %}
 
         {# include footer #}
         {% include "components/footer.njk" %}
