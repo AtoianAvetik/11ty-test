@@ -41,7 +41,7 @@
 
 </head>
 
-<body {% if body_class %} id="{{ body_class }}"{% endif %} class="text-purple-900 leading-normal text-lg">
+<body id="post" class="text-purple-900 leading-normal text-lg">
 
 
     <a class="sr-only" href="#main">Skip to content</a>
@@ -52,7 +52,22 @@
         {% include "components/header.njk" %}
 
         {# include content #}
-        {{ content | safe }}
+        <main id="main" class="main inner flex flex-1 flex-col py-10 lg:py-20 focus:outline-none" tabindex="-1">
+
+            <section id="container-centre" class="column centre flex-1">
+
+                <h1 class="page-title">{{ title }}</h1>
+                <h2 class="page-subtitle">11ty подзаголовок</h2>
+
+                <div class="content">
+
+                    {{ content | safe }}
+
+                </div>
+
+            </section>
+
+        </main>
 
 
         {# include footer #}
