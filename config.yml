@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to main)
 collections:
-  - name: "post" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
     folder: "site" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{lang}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -14,35 +14,19 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Language", name: "lang", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "lang"
-    label: "Language"
+  - name: "langs"
+    label: "Languages"
     extension: "json"
-    create: true
     files:
-      - file: "site/globals/langs.json"
-        label: "Language"
-        name: "lang"
+      - label: "Languages"
+        name: "langs"
+        file: "site/globals/langs.json"
         fields:
-          - { name: "code", label: "Code", widget: "string" }
-          - { name: "url", label: "Url", widget: "string" }
-          - { name: "name", label: "Name", widget: "string" }
-    fields:
-      - { name: "code", label: "Code", widget: "string" }
-      - { name: "url", label: "Url", widget: "string" }
-      - { name: "name", label: "Name", widget: "string" }
-  - name: "tourInfo"
-    label: "Tour Info"
-    description: "Upcoming tours and their availability"
-    files:
-      - label: "tour"
-        name: "Tour"
-        file: "site/globals/tours.json"
-        fields:
-          - label: "Tour List"
-            name: "tourList"
+          - label: "Language"
+            name: "language"
             widget: "list"
             fields:
-              - { label: "Tour Date", name: "date", widget: "datetime" }
-              - { label: "Total Places", name: "totalPlaces", widget: "number" }
-              - { label: "Filled Places", name: "filledPlaces", widget: "number" }
+              - { name: "code", label: "Code", widget: "string" }
+              - { name: "url", label: "Url", widget: "string" }
+              - { name: "name", label: "Name", widget: "string" }
 media_folder: 'uploads'
