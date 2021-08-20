@@ -22,10 +22,10 @@ collections:
       - file: "site/globals/langs.json"
         label: "Language"
         name: "lang"
-        fields:
-          - { name: "code", label: "Code", widget: "string" }
-          - { name: "url", label: "Url", widget: "string" }
-          - { name: "name", label: "Name", widget: "string" }
+    fields:
+      - { name: "code", label: "Code", widget: "string" }
+      - { name: "url", label: "Url", widget: "string" }
+      - { name: "name", label: "Name", widget: "string" }
   - name: "tourInfo"
     label: "Tour Info"
     description: "Upcoming tours and their availability"
