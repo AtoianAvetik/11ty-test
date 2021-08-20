@@ -1,0 +1,8 @@
+{
+    "name": "#11tydemo",
+    "url": "https://11tydemo.com",
+    "images": {
+        "logo": "/images/logo/logo.svg",
+        "favicon": "/images/favicon.ico"
+    }
+}
