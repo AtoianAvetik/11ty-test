@@ -8,10 +8,21 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{lang}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
       - {label: "Meta title", name: "meta_title", widget: "string"}
       - {label: "Meta description", name: "meta_description", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Language", name: "lang", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "lang"
+    label: "Language"
+    extension: "json"
+    files:
+      - file: "site/globals/langs.json"
+        label: "Language"
+        name: "lang"
+        fields:
+          - { name: "code", label: "Code", widget: "string" }
+          - { name: "url", label: "Url", widget: "string" }
+          - { name: "name", label: "Name", widget: "string" }
 media_folder: 'uploads'
