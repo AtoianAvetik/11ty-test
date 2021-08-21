@@ -1,17 +1,19 @@
-[
-    {
-        "code": "en",
-        "url": "/",
-        "name": "English"
-    },
-    {
-        "code": "ru",
-        "url": "/ru/",
-        "name": "Русский"
-    },
-    {
-        "code": "uk",
-        "url": "/uk/",
-        "name": "Українська"
-    }
-]
+{
+    "list": [
+        {
+            "code": "en",
+            "url": "/",
+            "name": "English"
+        },
+        {
+            "code": "ru",
+            "url": "/ru/",
+            "name": "Русский"
+        },
+        {
+            "code": "uk",
+            "url": "/uk/",
+            "name": "Українська"
+        }
+    ]
+}

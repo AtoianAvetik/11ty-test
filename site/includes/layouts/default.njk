@@ -33,8 +33,8 @@
     {# canonical #}
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-    {% if page.url | isLocalized(langs) %}
-        {% for lang in langs %}
+    {% if page.url | isLocalized(langs.list) %}
+        {% for lang in langs.list %}
         <link rel="alternate" hreflang="{{ lang.code }}" href="{{ site.url }}{{ lang.url }}" />
         {% endfor %}
     {% endif %}
