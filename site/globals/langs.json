@@ -21,6 +21,11 @@
       "code": "en",
       "url": "/",
       "name": "English"
+    },
+    {
+      "code": "ru",
+      "url": "/ru",
+      "name": "Russian"
     }
   ]
 }
