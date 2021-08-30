@@ -26,6 +26,16 @@
       "code": "ru",
       "url": "/ru",
       "name": "Russian"
+    },
+    {
+      "code": "uk",
+      "url": "/uk",
+      "name": "Ukranian"
+    },
+    {
+      "code": "de",
+      "url": "/de",
+      "name": "German"
     }
   ]
 }
