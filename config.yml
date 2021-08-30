@@ -12,7 +12,7 @@ collections:
       - {label: "Meta title", name: "meta_title", widget: "string"}
       - {label: "Meta description", name: "meta_description", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Language", name: "lang", widget: "relation", collection: 'langs', searchFields: ['langs'], valueField: 'langs.*.code', displayFields: ['code.*.name']}
+      - {label: "Language", name: "lang", widget: "relation", collection: 'langs', searchFields: ['langs'], valueField: 'langs.*.code', displayFields: ['langs.*.name']}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "langs"
     label: "Languages"
@@ -21,7 +21,7 @@ collections:
         name: "langs"
         file: "site/globals/langs.json"
         fields:
-          - label: "Languages list"
+          - label: "Language(s)"
             name: "list"
             widget: "list"
             fields:
