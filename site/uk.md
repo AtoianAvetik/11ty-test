@@ -1,8 +1,8 @@
 ---
 layout: default
-meta_title: 11tydemo демо проект
+meta_title: 11tydemo демо проект - UK
 meta_description: Деякий опис!
-title: '#StayTheFuckHome'
+title: "#StayTheFuckHome - UK"
 lang: uk
 ---
 
