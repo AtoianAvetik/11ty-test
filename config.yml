@@ -14,6 +14,7 @@ collections:
       - {label: "Meta title", name: "meta_title", widget: "string"}
       - {label: "Meta description", name: "meta_description", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
       - {label: "Language", name: "lang", widget: "relation", collection: 'langs', searchFields: ['langs.*.name'], valueField: 'langs.*.code', displayFields: ['langs.*.name'], file: 'langs'}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "langs"
